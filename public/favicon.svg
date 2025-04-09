@@ -1,0 +1,12 @@
+
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .circle { fill: #3b82f6; }
+    .k { fill: white; }
+    @media (prefers-color-scheme: dark) {
+      .circle { fill: #3b82f6; }
+    }
+  </style>
+  <circle class="circle" cx="50" cy="50" r="50" />
+  <path class="k" d="M36 30h8v17l16-17h10l-16 17 16 23h-10l-12-17.5-4 4.5v13h-8z" />
+</svg>
