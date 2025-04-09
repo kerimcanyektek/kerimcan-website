@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+
+import { useEffect, useState, useRef } from 'react';
 import { MapPin, Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,9 +16,13 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   
   useEffect(() => {
     setIsLoaded(true);
+    
+    // Initialize EmailJS with your public key
+    emailjs.init("YOUR_PUBLIC_KEY");
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,8 +37,14 @@ const ContactPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Use EmailJS to send the email
+    emailjs.sendForm(
+      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      formRef.current!,
+      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+    )
+    .then(() => {
       toast({
         title: "Mesajınız gönderildi!",
         description: "En kısa sürede size dönüş yapacağım.",
@@ -44,7 +56,16 @@ const ContactPage = () => {
         message: ''
       });
       setIsSubmitting(false);
-    }, 1500);
+    })
+    .catch((error) => {
+      console.error('Email sending failed:', error);
+      toast({
+        title: "Gönderim başarısız!",
+        description: "Mesajınız gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+    });
   };
 
   return (
@@ -109,7 +130,7 @@ const ContactPage = () => {
           )}>
             <h2 className="text-2xl font-heading font-bold mb-6">Mesaj Gönderin</h2>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
