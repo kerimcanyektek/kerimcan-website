@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from 'react';
-import { MapPin, Mail, Phone, Send } from 'lucide-react';
+import { MapPin, Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useToast } from "@/components/ui/use-toast";
@@ -84,7 +83,7 @@ const ContactPage = () => {
                 <div className="ml-4">
                   <h3 className="text-lg font-medium">Adres</h3>
                   <address className="not-italic text-muted-foreground">
-                    İstanbul, Türkiye
+                    Mersin, Türkiye
                   </address>
                 </div>
               </div>
@@ -95,20 +94,8 @@ const ContactPage = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium">E-posta</h3>
-                  <a href="mailto:info@kerimcanyektek.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@kerimcanyektek.com
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mt-1">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium">Telefon</h3>
-                  <a href="tel:+905001234567" className="text-muted-foreground hover:text-primary transition-colors">
-                    +90 (500) 123 45 67
+                  <a href="mailto:me@kerimcanyektek.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    me@kerimcanyektek.com
                   </a>
                 </div>
               </div>
