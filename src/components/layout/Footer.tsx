@@ -1,6 +1,6 @@
 
 import { NavLink } from "react-router-dom";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -69,12 +69,17 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-4">İletişim</h3>
             <ul className="space-y-2">
-              <li className="text-muted-foreground">
-                İstanbul, Türkiye
+              <li className="flex items-center text-muted-foreground">
+                <MapPin className="mr-2 h-4 w-4 text-primary" />
+                Mersin, Türkiye
               </li>
               <li>
-                <a href="mailto:info@kerimcanyektek.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@kerimcanyektek.com
+                <a 
+                  href="mailto:me@kerimcanyektek.com" 
+                  className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Mail className="mr-2 h-4 w-4 text-primary" />
+                  me@kerimcanyektek.com
                 </a>
               </li>
             </ul>
@@ -92,3 +97,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
