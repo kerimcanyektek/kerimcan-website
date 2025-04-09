@@ -12,39 +12,51 @@ const AboutPage = () => {
   }, []);
 
   const skills = [
-    "JavaScript (ES6+)", "TypeScript", "React", "Redux", "Next.js",
-    "HTML5", "CSS3/SASS", "Tailwind CSS", "Styled Components",
+    "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Vue.js",
+    "Node.js", "HTML5", "CSS3/SASS", "Tailwind CSS", "Styled Components",
     "RESTful APIs", "GraphQL", "Git", "Figma", "UI/UX Design",
-    "Jest", "React Testing Library", "Webpack", "Node.js basics"
+    "Jest", "React Testing Library", "Webpack", "AWS"
   ];
 
   const experiences = [
     {
-      position: "Senior Frontend Developer",
-      company: "ABC Digital",
-      period: "2021 - Şu an",
-      description: "Modern web uygulamaları geliştirmek için React ve TypeScript kullanıyorum. Mikro frontend mimarisiyle ölçeklenebilir ve bakımı kolay uygulamalar oluşturuyorum."
+      position: "Frontend Engineer",
+      company: "Jotform",
+      period: "Haz 2020 - Şu an",
+      description: "Jotform'un kapsamlı form oluşturma platformunda React ve TypeScript kullanarak yenilikçi özellikler ve arayüzler geliştiriyorum. PDF form işleme ve karmaşık veri görselleştirme araçları içeren yeni çözümler tasarladım."
     },
     {
       position: "Frontend Developer",
-      company: "XYZ Tech",
-      period: "2019 - 2021",
-      description: "React tabanlı uygulamalar geliştirdim ve kullanıcı deneyimini iyileştirmek için UI/UX tasarım prensiplerini uyguladım."
+      company: "Hepsiburada.com",
+      period: "Tem 2019 - Haz 2020",
+      description: "Türkiye'nin lider e-ticaret platformunda Vue.js ve React kullanarak büyük ölçekli web uygulamaları geliştirdim. Performans optimizasyonu ile sayfa yüklenme sürelerini %30 azaltan geliştirmeler yaptım."
     },
     {
-      position: "Junior Web Developer",
-      company: "123 Web Agency",
-      period: "2017 - 2019",
-      description: "HTML, CSS ve JavaScript kullanarak duyarlı web siteleri oluşturdum. jQuery ve Bootstrap gibi kütüphanelerle çalıştım."
+      position: "Frontend Developer",
+      company: "Arçelik Global",
+      period: "Eki 2018 - Tem 2019",
+      description: "Arçelik'in çeşitli dijital projelerinde JavaScript, React ve Angular kullanarak inovatif kullanıcı arayüzleri geliştirdim. Responsive tasarım prensipleri ve test odaklı geliştirme yaklaşımıyla kaliteli kod ürettim."
+    },
+    {
+      position: "Web Developer",
+      company: "Yalova Üniversitesi",
+      period: "Oca 2018 - Eyl 2018",
+      description: "Üniversite web sitelerini ve iç uygulamalarını HTML, CSS ve JavaScript kullanarak geliştirdim. Kullanıcı deneyimine odaklanan erişilebilir web siteleri tasarladım."
     }
   ];
 
   const education = [
     {
       degree: "Bilgisayar Mühendisliği",
-      institution: "İstanbul Teknik Üniversitesi",
-      period: "2013 - 2017",
-      description: "Bilgisayar bilimi, veri yapıları, algoritmalar ve yazılım mühendisliği alanlarında eğitim aldım."
+      institution: "Yalova Üniversitesi",
+      period: "2014 - 2018",
+      description: "Web geliştirme, veri yapıları, algoritmalar ve yazılım mühendisliği alanlarına odaklanarak bilgisayar bilimi eğitimi aldım."
+    },
+    {
+      degree: "Erasmus+ Öğrenci Değişim Programı",
+      institution: "Vilnius Gediminas Technical University",
+      period: "2017",
+      description: "Litvanya'da web teknolojileri ve yazılım geliştirme üzerine eğitim aldım."
     }
   ];
 
@@ -62,7 +74,7 @@ const AboutPage = () => {
             "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
             isLoaded && "animate-slide-down"
           )} style={{ animationDelay: '0.1s' }}>
-            Frontend geliştirici olarak kullanıcı odaklı ve yüksek performanslı web uygulamaları oluşturuyorum.
+            Kullanıcı deneyimine odaklanan, modern ve performans odaklı web uygulamaları geliştiren bir Frontend Engineer'im.
           </p>
         </div>
       </div>
@@ -121,16 +133,16 @@ const AboutPage = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Merhaba! Ben Kerimcan, İstanbul'da yaşayan tutkulu bir Frontend Developer'ım. 5+ yıllık deneyimle modern, kullanıcı dostu web uygulamaları geliştiriyorum.
+                    Merhaba! Ben Kerimcan, 5+ yıllık deneyime sahip bir Frontend Engineer'im. Modern web teknolojileri kullanarak kullanıcı dostu, performans odaklı ve erişilebilir web uygulamaları geliştiriyorum.
                   </p>
                   <p>
-                    Frontend geliştirmede React, TypeScript ve modern JavaScript ekosistemi konusunda uzmanlığa sahibim. Kullanıcı deneyimini ön planda tutarak, estetik ve fonksiyonel arayüzler tasarlıyorum. Responsive tasarım, performans optimizasyonu ve erişilebilirlik konularında titizlikle çalışıyorum.
+                    Şu anda Jotform'da Frontend Engineer olarak çalışıyorum. React ve TypeScript ile kompleks form çözümleri, PDF form işleme ve veri görselleştirme araçları geliştiriyorum. Mikro frontend mimarisi ve modern JavaScript kütüphaneleri konusunda uzmanlığım var.
                   </p>
                   <p>
-                    Sadece kod yazmıyorum, aynı zamanda UI/UX tasarım prensiplerini de uygulayarak, kullanıcıların sorunlarını çözen ve onlara değer katan çözümler üretiyorum. Yeni teknolojileri yakından takip ediyor ve sürekli kendimi geliştiriyorum.
+                    Daha önce Hepsiburada.com ve Arçelik gibi büyük şirketlerde Vue.js ve React ile e-ticaret ve dijital çözümler geliştirdim. Performans optimizasyonu, kullanıcı deneyimi tasarımı ve test odaklı geliştirme konularında deneyimliyim.
                   </p>
                   <p>
-                    İşbirliğine açık bir ekip oyuncusuyum ve projeleri başarıyla tamamlamak için iletişimi önemsiyorum. Her projede kaliteli, temiz ve sürdürülebilir kod yazmayı hedefliyorum.
+                    Yazılım geliştirme süreçlerinde kaliteli kod üretmeye, teknik borçları azaltmaya ve sürekli öğrenmeye değer veriyorum. Yeni teknolojileri keşfetmeyi ve bilgilerimi ekibimle paylaşmayı seviyorum.
                   </p>
                 </div>
               </div>
