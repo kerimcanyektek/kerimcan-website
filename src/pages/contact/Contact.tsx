@@ -100,24 +100,6 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="mt-8 pt-8 border-t border-border">
-              <h3 className="text-lg font-medium mb-4">Çalışma Saatleri</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex justify-between">
-                  <span>Pazartesi - Cuma:</span>
-                  <span>09:00 - 18:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Cumartesi:</span>
-                  <span>10:00 - 14:00</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Pazar:</span>
-                  <span>Kapalı</span>
-                </li>
-              </ul>
-            </div>
           </div>
           
           {/* Contact Form */}
