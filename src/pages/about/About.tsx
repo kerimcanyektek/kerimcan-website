@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from 'react';
-import { ArrowRight, Download, Calendar, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowRight, Download, Calendar, Briefcase, GraduationCap, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -149,7 +148,27 @@ const AboutPage = () => {
 
               <div className="pt-4">
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
-                  <Briefcase className="mr-2 h-6 w-6 text-primary" />
+                  İletişim Bilgileri
+                </h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <div className="flex items-center">
+                    <Mail className="mr-2 h-5 w-5 text-primary" />
+                    <a 
+                      href="mailto:me@kerimcanyektek.com" 
+                      className="hover:text-primary transition-colors"
+                    >
+                      me@kerimcanyektek.com
+                    </a>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="mr-2 h-5 w-5 text-primary" />
+                    <span>Mersin, Türkiye</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
                   Deneyimlerim
                 </h2>
                 <div className="space-y-6">
@@ -173,7 +192,6 @@ const AboutPage = () => {
 
               <div className="pt-4">
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
-                  <GraduationCap className="mr-2 h-6 w-6 text-primary" />
                   Eğitim
                 </h2>
                 <div className="space-y-6">
