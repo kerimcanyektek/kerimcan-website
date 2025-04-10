@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { MapPin, Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -39,7 +40,7 @@ const ContactPage = () => {
     // Use EmailJS to send the email
     emailjs.sendForm(
       'service_dcecg4l', // Updated service ID
-      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      'template_qqpcs1u', // Updated template ID
       formRef.current!,
       'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
     )
