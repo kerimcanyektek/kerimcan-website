@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { MapPin, Mail, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,7 +22,7 @@ const ContactPage = () => {
     setIsLoaded(true);
     
     // Initialize EmailJS with your public key
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("ssltmQXFc9GkzYGnm");
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -41,7 +42,7 @@ const ContactPage = () => {
       'service_dcecg4l', 
       'template_qqpcs1u', 
       formRef.current!,
-      'YOUR_PUBLIC_KEY'
+      "ssltmQXFc9GkzYGnm"
     )
     .then(() => {
       toast({
