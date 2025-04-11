@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,16 +27,61 @@ const SkillsSection = () => {
   }, []);
 
   const skills = [
-    { name: "React", level: 90 },
-    { name: "TypeScript", level: 85 },
-    { name: "JavaScript", level: 95 },
-    { name: "HTML5 & CSS3", level: 95 },
-    { name: "Next.js", level: 80 },
-    { name: "Redux", level: 85 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "Styled Components", level: 85 },
-    { name: "UI/UX Design", level: 75 },
-    { name: "Responsive Design", level: 90 },
+    { 
+      name: "Wordpress", 
+      icon: "/wordpress-icon.svg", 
+      category: "CMS"
+    },
+    { 
+      name: "HTML", 
+      icon: "/html-icon.svg", 
+      category: "Frontend"
+    },
+    { 
+      name: "CSS", 
+      icon: "/css-icon.svg", 
+      category: "Frontend"
+    },
+    { 
+      name: "Javascript", 
+      icon: "/javascript-icon.svg", 
+      category: "Frontend"
+    },
+    { 
+      name: "Typescript", 
+      icon: "/typescript-icon.svg", 
+      category: "Frontend"
+    },
+    { 
+      name: "React", 
+      icon: "/react-icon.svg", 
+      category: "Frontend"
+    },
+    { 
+      name: "Next.js", 
+      icon: "/nextjs-icon.svg", 
+      category: "Frontend"
+    },
+    { 
+      name: "Figma", 
+      icon: "/figma-icon.svg", 
+      category: "Design"
+    },
+    { 
+      name: "Adobe Photoshop", 
+      icon: "/photoshop-icon.svg", 
+      category: "Design"
+    },
+    { 
+      name: "Git & Github", 
+      icon: "/github-icon.svg", 
+      category: "Tools"
+    },
+    { 
+      name: "Agile / Scrum", 
+      icon: "/agile-icon.svg", 
+      category: "Methodology"
+    },
   ];
 
   return (
@@ -45,39 +92,45 @@ const SkillsSection = () => {
             "text-3xl md:text-4xl font-heading font-bold mb-4",
             isVisible && "animate-slide-up"
           )}>
-            Becerilerim
+            Yeteneklerim
           </h2>
           <p className={cn(
             "text-muted-foreground",
             isVisible && "animate-slide-up"
           )} style={{ animationDelay: '0.1s' }}>
-            Modern frontend geliştirme için kullandığım teknolojiler ve yeteneklerim.
+            Modern yazılım geliştirme için kullandığım teknolojiler ve yeteneklerim.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {skills.map((skill, index) => (
-            <div 
+            <Card 
               key={skill.name}
               className={cn(
-                "bg-background rounded-lg p-4 shadow-sm",
+                "overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 border-primary/10",
                 isVisible && "animate-slide-up"
               )}
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+              style={{ animationDelay: `${0.05 * (index + 1)}s` }}
             >
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="font-medium">{skill.name}</h3>
-                <span className="text-sm text-muted-foreground">{skill.level}%</span>
-              </div>
-              <div className="w-full h-2 bg-secondary rounded-full">
-                <div 
-                  className="h-full bg-primary rounded-full transition-all duration-1000 ease-out"
-                  style={{ 
-                    width: isVisible ? `${skill.level}%` : '0%'
-                  }}
-                />
-              </div>
-            </div>
+              <CardContent className="p-4 flex flex-col items-center justify-center text-center h-full">
+                <div className="w-12 h-12 mb-3 flex items-center justify-center">
+                  <img 
+                    src={skill.icon} 
+                    alt={`${skill.name} icon`} 
+                    className="max-w-full max-h-full object-contain"
+                    onError={(e) => {
+                      // Fallback if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://via.placeholder.com/48?text=" + skill.name.charAt(0);
+                    }}
+                  />
+                </div>
+                <h3 className="font-medium text-sm">{skill.name}</h3>
+                <Badge variant="secondary" className="mt-2 text-xs">
+                  {skill.category}
+                </Badge>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
