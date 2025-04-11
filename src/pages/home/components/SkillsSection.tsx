@@ -29,57 +29,57 @@ const SkillsSection = () => {
   const skills = [
     { 
       name: "Wordpress", 
-      icon: "/wordpress-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg", 
       category: "CMS"
     },
     { 
       name: "HTML", 
-      icon: "/html-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", 
       category: "Frontend"
     },
     { 
       name: "CSS", 
-      icon: "/css-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", 
       category: "Frontend"
     },
     { 
       name: "Javascript", 
-      icon: "/javascript-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", 
       category: "Frontend"
     },
     { 
       name: "Typescript", 
-      icon: "/typescript-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
       category: "Frontend"
     },
     { 
       name: "React", 
-      icon: "/react-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", 
       category: "Frontend"
     },
     { 
       name: "Next.js", 
-      icon: "/nextjs-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", 
       category: "Frontend"
     },
     { 
       name: "Figma", 
-      icon: "/figma-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", 
       category: "Design"
     },
     { 
       name: "Adobe Photoshop", 
-      icon: "/photoshop-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg", 
       category: "Design"
     },
     { 
       name: "Git & Github", 
-      icon: "/github-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", 
       category: "Tools"
     },
     { 
       name: "Agile / Scrum", 
-      icon: "/agile-icon.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg", 
       category: "Methodology"
     },
   ];
@@ -121,7 +121,7 @@ const SkillsSection = () => {
                     onError={(e) => {
                       // Fallback if image fails to load
                       const target = e.target as HTMLImageElement;
-                      target.src = "https://via.placeholder.com/48?text=" + skill.name.charAt(0);
+                      target.src = `https://via.placeholder.com/48?text=${skill.name.charAt(0)}`;
                     }}
                   />
                 </div>
