@@ -69,12 +69,12 @@ const SkillsSection = () => {
     },
     { 
       name: "Adobe Photoshop", 
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg", 
       category: "Design"
     },
     { 
       name: "Git & Github", 
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", 
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg", 
       category: "Tools"
     },
     { 
