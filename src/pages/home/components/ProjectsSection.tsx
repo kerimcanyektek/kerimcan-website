@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Github } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -29,28 +29,25 @@ const ProjectsSection = () => {
 
   const featuredProjects = [
     {
-      title: "E-Ticaret Platformu",
-      description: "React ve Redux kullanarak geliştirilen kapsamlı bir e-ticaret çözümü. Kullanıcı dostu arayüz ve güçlü altyapı.",
+      title: "Villa Koleji",
+      description: "Özel Tarsus Villa Koleji için tasarlanmış kurumsal web sitesi. Kullanıcı dostu arayüz ve modern tasarım.",
       image: "/placeholder.svg",
-      tags: ["React", "Redux", "Styled Components"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com"
+      tags: ["WordPress", "Responsive Design", "Eğitim"],
+      demoUrl: "https://villakoleji.k12.tr/"
     },
     {
-      title: "Finans Dashboard",
-      description: "Finansal verileri görselleştiren, gerçek zamanlı güncellenen bir dashboard uygulaması.",
+      title: "Psikolog Mehmet Ali Yılmaz",
+      description: "Profesyonel ve güvenilir bir psikoloğun online varlığını güçlendirmek için tasarlanmış kişisel web sitesi.",
       image: "/placeholder.svg",
-      tags: ["TypeScript", "Next.js", "TailwindCSS"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com"
+      tags: ["WordPress", "Sağlık", "Kişisel Site"],
+      demoUrl: "https://pskmehmetaliyilmaz.com/"
     },
     {
-      title: "Blog Platformu",
-      description: "İçerik yönetim sistemi ve okuyucu deneyimi odaklı modern bir blog uygulaması.",
+      title: "Poortre",
+      description: "Bilimsel Resim Analizi Platformu olarak tasarlanmış, sanat ve bilimi birleştiren yenilikçi bir platform.",
       image: "/placeholder.svg",
-      tags: ["React", "Node.js", "MongoDB"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com"
+      tags: ["Web Uygulama", "Analiz Platformu", "Sanat"],
+      demoUrl: "https://www.poortre.com"
     }
   ];
 
@@ -106,15 +103,7 @@ const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm text-primary hover:underline"
                   >
-                    Demo <ExternalLink className="ml-1 h-3 w-3" />
-                  </a>
-                  <a 
-                    href={project.sourceUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm text-primary hover:underline"
-                  >
-                    Kaynak <Github className="ml-1 h-3 w-3" />
+                    Siteyi Ziyaret Et <ExternalLink className="ml-1 h-3 w-3" />
                   </a>
                 </div>
               </div>
