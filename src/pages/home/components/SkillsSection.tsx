@@ -1,8 +1,8 @@
-
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import GithubWhiteLogo from '@/assets/icons/github-white.svg';
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -74,7 +74,7 @@ const SkillsSection = () => {
     },
     { 
       name: "Git & Github", 
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg", 
+      icon: GithubWhiteLogo, 
       category: "Tools"
     },
     { 
@@ -119,7 +119,6 @@ const SkillsSection = () => {
                     alt={`${skill.name} icon`} 
                     className="max-w-full max-h-full object-contain"
                     onError={(e) => {
-                      // Fallback if image fails to load
                       const target = e.target as HTMLImageElement;
                       target.src = `https://via.placeholder.com/48?text=${skill.name.charAt(0)}`;
                     }}
@@ -170,4 +169,3 @@ const SkillsSection = () => {
 };
 
 export default SkillsSection;
-
