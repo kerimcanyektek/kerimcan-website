@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import GithubWhiteLogo from '@/assets/icons/github-white.svg';
+import PhotoshopWhiteLogo from '@/assets/icons/photoshop-white.svg';
 
 const SkillsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,7 +70,7 @@ const SkillsSection = () => {
     },
     { 
       name: "Adobe Photoshop", 
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg", 
+      icon: PhotoshopWhiteLogo, 
       category: "Design"
     },
     { 
