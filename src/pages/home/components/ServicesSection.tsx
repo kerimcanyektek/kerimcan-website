@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { Code, Paintbrush, LayoutGrid, Smartphone } from 'lucide-react';
+import { Code, ShoppingCart, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const ServicesSection = () => {
@@ -28,23 +28,21 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <Code className="h-8 w-8 text-primary" />,
-      title: "Frontend Geliştirme",
-      description: "Modern JavaScript frameworkleri (React, Vue) ile duyarlı, hızlı ve kullanıcı dostu web uygulamaları geliştiriyorum."
+      title: "Wordpress Hizmetleri",
+      description: "Özelleştirilmiş WordPress çözümleri ile güçlü ve yönetimi kolay web siteleri oluşturuyorum.",
+      link: "https://grodea.com/hizmetler/wordpress/"
     },
     {
-      icon: <LayoutGrid className="h-8 w-8 text-primary" />,
-      title: "UI/UX Tasarımı",
-      description: "Kullanıcı odaklı arayüz tasarımları ve kullanıcı deneyimi planlaması yaparak projenizi farklı bir seviyeye taşıyorum."
+      icon: <Globe className="h-8 w-8 text-primary" />,
+      title: "Web Geliştirme",
+      description: "Modern teknolojiler kullanarak hızlı, kullanıcı dostu ve etkileyici kurumsal web siteleri tasarlıyorum.",
+      link: "https://grodea.com/hizmetler/kurumsal-web-tasarim/"
     },
     {
-      icon: <Smartphone className="h-8 w-8 text-primary" />,
-      title: "Responsive Web Tasarımı",
-      description: "Tüm cihazlarda mükemmel çalışan ve görünen, duyarlı web siteleri tasarlıyorum."
-    },
-    {
-      icon: <Paintbrush className="h-8 w-8 text-primary" />,
-      title: "Web Animasyonları",
-      description: "İlgi çekici ve etkileşimli kullanıcı deneyimleri için modern web animasyonları oluşturuyorum."
+      icon: <ShoppingCart className="h-8 w-8 text-primary" />,
+      title: "E-Ticaret Çözümleri",
+      description: "Satışlarınızı artıracak, kullanıcı deneyimi odaklı online mağaza ve e-ticaret platformları geliştiriyorum.",
+      link: "https://grodea.com/hizmetler/e-ticaret/"
     }
   ];
 
@@ -66,12 +64,15 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <a 
+              href={service.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={index}
               className={cn(
-                "bg-card rounded-lg p-6 shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20",
+                "bg-card rounded-lg p-6 shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20 hover:-translate-y-1",
                 isVisible && "animate-slide-up"
               )}
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
@@ -79,7 +80,7 @@ const ServicesSection = () => {
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-xl font-medium mb-2">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
