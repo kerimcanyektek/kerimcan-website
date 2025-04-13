@@ -32,21 +32,21 @@ const ProjectsSection = () => {
       title: "Villa Koleji",
       description: "Özel Tarsus Villa Koleji için tasarlanmış kurumsal web sitesi. Kullanıcı dostu arayüz ve modern tasarım.",
       image: "/placeholder.svg",
-      tags: ["WordPress", "Responsive Design", "Eğitim"],
+      tags: ["WordPress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
       demoUrl: "https://villakoleji.k12.tr/"
     },
     {
       title: "Psikolog Mehmet Ali Yılmaz",
       description: "Profesyonel ve güvenilir bir psikoloğun online varlığını güçlendirmek için tasarlanmış kişisel web sitesi.",
       image: "/placeholder.svg",
-      tags: ["WordPress", "Sağlık", "Kişisel Site"],
+      tags: ["WordPress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
       demoUrl: "https://pskmehmetaliyilmaz.com/"
     },
     {
       title: "Poortre",
       description: "Bilimsel Resim Analizi Platformu olarak tasarlanmış, sanat ve bilimi birleştiren yenilikçi bir platform.",
       image: "/placeholder.svg",
-      tags: ["Web Uygulama", "Analiz Platformu", "Sanat"],
+      tags: ["WordPress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
       demoUrl: "https://www.poortre.com"
     }
   ];

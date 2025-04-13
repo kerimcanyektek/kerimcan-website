@@ -41,7 +41,7 @@ const ServicesSection = () => {
     {
       icon: <ShoppingCart className="h-8 w-8 text-primary" />,
       title: "E-Ticaret Çözümleri",
-      description: "Satışlarınızı artıracak, kullanıcı deneyimi odaklı online mağaza ve e-ticaret platformları geliştiriyorum.",
+      description: "IdeaSoft e-ticaret altyapısıyla, işletmenizin dijital dönüşümünü hızlandıracak, satış süreçlerini kolaylaştıracak ve müşteri memnuniyetini artıracak profesyonel e-ticaret çözümleri sunuyoruz.",
       link: "https://grodea.com/hizmetler/e-ticaret/"
     }
   ];
