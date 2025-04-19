@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Calendar, Clock, Search, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -31,7 +30,7 @@ const BlogPage = () => {
       excerpt: "React uygulamalarınızı optimize etmek için kullanabileceğiniz en etkili teknikleri ve best practice'leri bu yazıda bulabilirsiniz.",
       date: "12 Mart 2023",
       readTime: "5 dakika",
-      category: "react",
+      category: "yazilim",
       image: "/placeholder.svg",
       tags: ["React", "Performance", "JavaScript"]
     },
@@ -41,7 +40,7 @@ const BlogPage = () => {
       excerpt: "Modern CSS layout tekniklerini kullanarak responsive tasarımlar oluşturmanın temel prensipleri ve örnekleri.",
       date: "5 Şubat 2023",
       readTime: "7 dakika",
-      category: "css",
+      category: "uiux",
       image: "/placeholder.svg",
       tags: ["CSS", "Responsive", "Layout"]
     },
@@ -51,7 +50,7 @@ const BlogPage = () => {
       excerpt: "TypeScript'in sağladığı tip güvenliğini kullanarak daha sağlam ve hatasız kod yazma teknikleri.",
       date: "18 Ocak 2023",
       readTime: "6 dakika",
-      category: "typescript",
+      category: "yazilim",
       image: "/placeholder.svg",
       tags: ["TypeScript", "JavaScript", "Frontend"]
     },
@@ -61,7 +60,7 @@ const BlogPage = () => {
       excerpt: "Next.js 13'ün getirdiği yenilikler ve server side rendering avantajlarını inceliyoruz.",
       date: "3 Aralık 2022",
       readTime: "8 dakika",
-      category: "react",
+      category: "yazilim",
       image: "/placeholder.svg",
       tags: ["Next.js", "React", "SSR"]
     },
@@ -71,7 +70,7 @@ const BlogPage = () => {
       excerpt: "Büyük ölçekli frontend uygulamalarını mikro frontend mimarisi ile nasıl yönetebileceğinizi öğrenin.",
       date: "21 Kasım 2022",
       readTime: "10 dakika",
-      category: "architecture",
+      category: "proje",
       image: "/placeholder.svg",
       tags: ["Architecture", "Micro Frontend", "React"]
     },
@@ -81,7 +80,7 @@ const BlogPage = () => {
       excerpt: "Redux Toolkit kullanarak React uygulamalarında state yönetimini basitleştirin.",
       date: "7 Ekim 2022",
       readTime: "6 dakika",
-      category: "react",
+      category: "yazilim",
       image: "/placeholder.svg",
       tags: ["Redux", "React", "State Management"]
     }
@@ -89,10 +88,9 @@ const BlogPage = () => {
 
   const categories = [
     { id: 'all', name: 'Tümü' },
-    { id: 'react', name: 'React' },
-    { id: 'css', name: 'CSS' },
-    { id: 'typescript', name: 'TypeScript' },
-    { id: 'architecture', name: 'Mimari' }
+    { id: 'yazilim', name: 'Yazılım Geliştirme' },
+    { id: 'proje', name: 'Proje Yönetimi' },
+    { id: 'uiux', name: 'UI & UX Design' }
   ];
 
   const filteredPosts = blogPosts.filter(post => {
