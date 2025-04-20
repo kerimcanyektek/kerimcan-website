@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Calendar, Clock, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,6 @@ const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [animateList, setAnimateList] = useState(false);
 
-  // "Havalı" fade ve slide animasyonlarını artırıyoruz (utility).
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -37,7 +35,7 @@ const BlogPage = () => {
       readTime: "6 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["JavaScript", "CSS", "Styled Components"],
     },
     {
       id: "2",
@@ -48,7 +46,7 @@ const BlogPage = () => {
       readTime: "7 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["CSS", "BEM", "Temiz Kod"],
     },
     {
       id: "3",
@@ -59,7 +57,7 @@ const BlogPage = () => {
       readTime: "8 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["React", "Ant Design", "UI"],
     },
     {
       id: "4",
@@ -70,7 +68,7 @@ const BlogPage = () => {
       readTime: "5 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["Vite", "Frontend", "Performans"],
     },
     {
       id: "5",
@@ -81,7 +79,7 @@ const BlogPage = () => {
       readTime: "7 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["Yapay Zeka", "Kod Editörü", "Verimlilik"],
     },
     {
       id: "6",
@@ -92,7 +90,7 @@ const BlogPage = () => {
       readTime: "8 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["Yapay Zeka", "Generative AI", "Teknoloji"],
     },
     {
       id: "7",
@@ -103,7 +101,7 @@ const BlogPage = () => {
       readTime: "6 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["Hata Yönetimi", "Debugging", "Yazılım Kalitesi"],
     },
     {
       id: "8",
@@ -114,7 +112,7 @@ const BlogPage = () => {
       readTime: "7 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["SOLID", "OOP", "Kod Kalitesi"],
     },
     {
       id: "9",
@@ -125,7 +123,7 @@ const BlogPage = () => {
       readTime: "6 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["GitHub", "Açık Kaynak", "Topluluk"],
     },
     {
       id: "10",
@@ -136,7 +134,7 @@ const BlogPage = () => {
       readTime: "5 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["CSS", "Web Tasarım", "Frontend"],
     },
     {
       id: "11",
@@ -147,7 +145,7 @@ const BlogPage = () => {
       readTime: "5 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["HTML", "Web", "Temel"],
     },
     {
       id: "12",
@@ -158,7 +156,7 @@ const BlogPage = () => {
       readTime: "9 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      tags: ["Frontend", "Optimizasyon", "Performans"],
     },
     {
       id: "13",
@@ -169,8 +167,8 @@ const BlogPage = () => {
       readTime: "8 dakika",
       category: "yazilim",
       image: "/placeholder.svg",
-      tags: ["Wordpress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
-    },
+      tags: ["Yazılım", "Kariyer", "Beceri"],
+    }
   ];
 
   const categories = [
@@ -189,9 +187,8 @@ const BlogPage = () => {
   });
 
   useEffect(() => {
-    // Animasyon state geçişlerini daha net ve cool hissettirmek için basit bir kısa timeout yerine transition timing'i güncelledim.
     if (filteredPosts.length > 0) {
-      setTimeout(() => setAnimateList(true), 50); // Hızlıca giriş animasyonu başlasın.
+      setTimeout(() => setAnimateList(true), 50);
     } else {
       setAnimateList(false);
     }
@@ -237,7 +234,6 @@ const BlogPage = () => {
           )}
           style={{ transitionDelay: "0.25s" }}
         >
-          {/* Filter buttons */}
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (
               <Button
@@ -251,7 +247,6 @@ const BlogPage = () => {
             ))}
           </div>
 
-          {/* Search */}
           <div className="w-full md:w-auto relative">
             <div className="relative">
               <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -266,7 +261,6 @@ const BlogPage = () => {
           </div>
         </div>
 
-        {/* Blog Cards */}
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
@@ -326,7 +320,6 @@ const BlogPage = () => {
         )}
       </div>
 
-      {/* Animasyonlara özel stil inject (yeni ve havalı keyframes burada tanımlı) */}
       <style>{`
         @keyframes slide-down {
           0% { opacity: 0; transform: translateY(-40px) scale(0.95);}
@@ -356,4 +349,3 @@ const BlogPage = () => {
 };
 
 export default BlogPage;
-
