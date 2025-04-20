@@ -25,24 +25,24 @@ const ProjectsSection = () => {
 
   const featuredProjects = [
     {
-      title: "Villa Koleji",
-      description: "Özel Tarsus Villa Koleji için tasarlanmış kurumsal web sitesi. Kullanıcı dostu arayüz ve modern tasarım.",
-      image: "/placeholder.svg",
-      tags: ["WordPress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      title: "Villa College",
+      description: "A corporate website designed for Özel Tarsus Villa Koleji, featuring a user-friendly interface and modern design.",
+      image: "src/assets/project-images/16.svg",
+      tags: ["WordPress", "Responsive Design", "SEO", "WordPress Speed Optimization"],
       demoUrl: "https://villakoleji.k12.tr/"
     },
     {
       title: "Psikolog Mehmet Ali Yılmaz",
-      description: "Profesyonel ve güvenilir bir psikoloğun online varlığını güçlendirmek için tasarlanmış kişisel web sitesi.",
-      image: "/placeholder.svg",
-      tags: ["WordPress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      description: "A personal website designed to strengthen the online presence of a professional and trusted psychologist.",
+      image: "src/assets/project-images/15.svg",
+      tags: ["WordPress", "Responsive Design", "SEO", "WordPress Speed Optimization"],
       demoUrl: "https://pskmehmetaliyilmaz.com/"
     },
     {
       title: "Poortre",
-      description: "Bilimsel Resim Analizi Platformu olarak tasarlanmış, sanat ve bilimi birleştiren yenilikçi bir platform.",
-      image: "/placeholder.svg",
-      tags: ["WordPress", "Responsive Design", "SEO", "Hız Optimizasyonu"],
+      description: "An innovative platform designed as a Psychological Drawing Analysis Platform, combining art and psychology.",
+      image: "src/assets/project-images/14.svg",
+      tags: ["WordPress", "Responsive Design", "SEO", "WordPress Speed Optimization"],
       demoUrl: "https://www.poortre.com"
     }
   ];
@@ -58,7 +58,7 @@ const ProjectsSection = () => {
             )}
             style={{ transitionDelay: "0.2s" }}
           >
-            Öne Çıkan Projelerim
+            Projects
           </h2>
           <p
             className={cn(
@@ -67,7 +67,7 @@ const ProjectsSection = () => {
             )}
             style={{ transitionDelay: "0.25s" }}
           >
-            En son geliştirdiğim projelerden bazıları. Daha fazlası için projeler sayfasını ziyaret edin.
+            Here are some of my latest projects. Visit the projects page to see more.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm text-primary hover:underline"
                   >
-                    Siteyi Ziyaret Et <ExternalLink className="ml-1 h-3 w-3" />
+                    Visit the Website <ExternalLink className="ml-1 h-3 w-3" />
                   </a>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const ProjectsSection = () => {
         <div className="text-center mt-12">
           <Button asChild>
             <Link to="/projects">
-              Tüm Projeleri Görüntüle
+              All Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

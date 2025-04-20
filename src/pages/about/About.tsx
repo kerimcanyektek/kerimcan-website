@@ -15,48 +15,42 @@ const AboutPage = () => {
     "JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Vue.js",
     "Node.js", "HTML5", "CSS3/SASS", "Tailwind CSS", "Styled Components",
     "RESTful APIs", "GraphQL", "Git", "Figma", "UI/UX Design",
-    "Jest", "React Testing Library", "Webpack", "AWS"
-  ];
-
-  const experiences = [
-    {
-      position: "Frontend Engineer",
-      company: "Jotform",
-      period: "Haz 2020 - Şu an",
-      description: "Jotform'un kapsamlı form oluşturma platformunda React ve TypeScript kullanarak yenilikçi özellikler ve arayüzler geliştiriyorum. PDF form işleme ve karmaşık veri görselleştirme araçları içeren yeni çözümler tasarladım."
-    },
-    {
-      position: "Frontend Developer",
-      company: "Hepsiburada.com",
-      period: "Tem 2019 - Haz 2020",
-      description: "Türkiye'nin lider e-ticaret platformunda Vue.js ve React kullanarak büyük ölçekli web uygulamaları geliştirdim. Performans optimizasyonu ile sayfa yüklenme sürelerini %30 azaltan geliştirmeler yaptım."
-    },
-    {
-      position: "Frontend Developer",
-      company: "Arçelik Global",
-      period: "Eki 2018 - Tem 2019",
-      description: "Arçelik'in çeşitli dijital projelerinde JavaScript, React ve Angular kullanarak inovatif kullanıcı arayüzleri geliştirdim. Responsive tasarım prensipleri ve test odaklı geliştirme yaklaşımıyla kaliteli kod ürettim."
-    },
-    {
-      position: "Web Developer",
-      company: "Yalova Üniversitesi",
-      period: "Oca 2018 - Eyl 2018",
-      description: "Üniversite web sitelerini ve iç uygulamalarını HTML, CSS ve JavaScript kullanarak geliştirdim. Kullanıcı deneyimine odaklanan erişilebilir web siteleri tasarladım."
-    }
+    "Cypress", "React Testing Library", "Webpack", "Agile/Scrum",
+    "SEO", "WordPress", "Micro Frontend Architecture", "CI/CD"
   ];
 
   const education = [
     {
-      degree: "Bilgisayar Mühendisliği",
-      institution: "Yalova Üniversitesi",
-      period: "2014 - 2018",
-      description: "Web geliştirme, veri yapıları, algoritmalar ve yazılım mühendisliği alanlarına odaklanarak bilgisayar bilimi eğitimi aldım."
+      degree: "Computer Programming",
+      institution: "Akdeniz University",
+      period: "2019 - 2021",
+    },
+  ];
+
+  const experiences = [
+    {
+      position: "Frontend Developer (Freelancer)",
+      company: "GRODEA",
+      period: "Oct 2022 - Mar 2025",
+      description: "I have worked as a freelancer, developing corporate websites for brands using HTML, CSS, JavaScript, React, Next.js, and WordPress technologies. Additionally, I have provided SEO-friendly article writing services in the Technology / Software category."
     },
     {
-      degree: "Erasmus+ Öğrenci Değişim Programı",
-      institution: "Vilnius Gediminas Technical University",
-      period: "2017",
-      description: "Litvanya'da web teknolojileri ve yazılım geliştirme üzerine eğitim aldım."
+      position: "Frontend Developer",
+      company: "SmartMessage",
+      period: "Dec 2023 - Feb 2024",
+      description: "I worked as a Frontend Developer at SmartMessage, supporting various projects. During this process, I contributed to frontend development while collaborating effectively with the team."
+    },
+    {
+      position: "Frontend Developer",
+      company: "eBay Turkey & GittiGidiyor",
+      period: "Jun 2021 - Nov 2022",
+      description: "In July 2021, I participated in the GittiGidiyor Technology Academy, organized by GittiGidiyor. After an intensive software engineering training program and hands-on projects under the guidance of GittiGidiyor's experienced software engineers, I received a job offer as a result of my success in the program. As of October 2021, I started working at GittiGidiyor as a Jr. Front-end Developer. For 1.5 years, I was part of the Scrum team responsible for the product detail page, contributing to frontend development processes and ensuring the successful delivery of projects together with the team."
+    },
+    {
+      position: "SEO Content Writer (Tech)",
+      company: "Coderspace.io",
+      period: "Jan 2021 - Oct 2021",
+      description: "While I was still a student, I founded Kerokod.com, where I shared my knowledge and experiences in software development while also managing a developer community. My work caught the attention of Coderspace, which offered me a project-based role in producing SEO-friendly technical content. Through this opportunity, I gained valuable experience by creating software and technology-focused content, allowing me to both learn new things and enhance my skills."
     }
   ];
 
@@ -68,13 +62,13 @@ const AboutPage = () => {
             "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-8",
             isLoaded && "animate-slide-down"
           )}>
-            Hakkımda
+            About Me
           </h1>
           <p className={cn(
             "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
             isLoaded && "animate-slide-down"
           )} style={{ animationDelay: '0.1s' }}>
-            Kullanıcı deneyimine odaklanan, modern ve performans odaklı web uygulamaları geliştiren bir Frontend Engineer'im.
+            I am a Frontend Developer focused on user experience, building modern and performance-oriented web applications.
           </p>
         </div>
       </div>
@@ -93,12 +87,33 @@ const AboutPage = () => {
               />
             </div>
 
+            <div className="pt-4">
+                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
+                  Contact Me
+                </h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <div className="flex items-center">
+                    <Mail className="mr-2 h-5 w-5 text-primary" />
+                    <a 
+                      href="mailto:me@kerimcanyektek.com" 
+                      className="hover:text-primary transition-colors"
+                    >
+                      me@kerimcanyektek.com
+                    </a>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="mr-2 h-5 w-5 text-primary" />
+                    <span>Mersin, Turkey</span>
+                  </div>
+                </div>
+              </div>
+
             <div className={cn(
               "mt-8 space-y-8",
               isLoaded && "animate-slide-from-left"
             )} style={{ animationDelay: '0.2s' }}>
               <div>
-                <h3 className="text-xl font-medium mb-4">Becerilerim</h3>
+                <h3 className="text-xl font-medium mb-4">Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <span 
@@ -113,9 +128,9 @@ const AboutPage = () => {
 
               <div>
                 <Button asChild variant="outline" className="w-full">
-                  <a href="/cv.pdf" download>
+                  <a href="/KerimcanYektek-CV.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
-                    CV'mi İndir
+                    Download CV
                   </a>
                 </Button>
               </div>
@@ -129,48 +144,52 @@ const AboutPage = () => {
             )}>
               <div>
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">
-                  Ben Kimim?
+                  Who Am I ?
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Merhaba! Ben Kerimcan, 5+ yıllık deneyime sahip bir Frontend Engineer'im. Modern web teknolojileri kullanarak kullanıcı dostu, performans odaklı ve erişilebilir web uygulamaları geliştiriyorum.
+                  I have been actively working on web projects for over 4 years, meticulously ensuring that my projects comply with modern web standards. During the development process, I pay particular attention to W3C standards, browser compatibility, high performance, and search engine optimization (SEO).
                   </p>
                   <p>
-                    Şu anda Jotform'da Frontend Engineer olarak çalışıyorum. React ve TypeScript ile kompleks form çözümleri, PDF form işleme ve veri görselleştirme araçları geliştiriyorum. Mikro frontend mimarisi ve modern JavaScript kütüphaneleri konusunda uzmanlığım var.
+                  My areas of expertise include WordPress, HTML, CSS (CSS Preprocessors, Bootstrap, Tailwind), JavaScript, TypeScript, React, Next.js, Node.js, Styled-Components, ANT Design, and GraphQL. Additionally, I work on micro frontend architecture and the development of modular structures.                  </p>
+                  <p>
+                  I have experience in the e-commerce sector, where I have developed SEO-friendly, high-performance, and scalable solutions. I am proficient in managing test processes, debugging, and improving software quality using Cypress and manual testing tools. I actively use DevOps tools such as Netlify, Vercel, and GitLab and have knowledge of CI/CD pipeline management.                  </p>
+                  <p>
+                  Furthermore, I have experience in project management and team coordination with Agile & Scrum methodologies, and I continue to improve myself in this field. In the future, I aim to specialize in technical leadership and process management, focusing on a Team Lead / Scrum Master role.
                   </p>
                   <p>
-                    Daha önce Hepsiburada.com ve Arçelik gibi büyük şirketlerde Vue.js ve React ile e-ticaret ve dijital çözümler geliştirdim. Performans optimizasyonu, kullanıcı deneyimi tasarımı ve test odaklı geliştirme konularında deneyimliyim.
+                  I am passionate about following new technologies, continuously learning, and improving myself.
                   </p>
-                  <p>
-                    Yazılım geliştirme süreçlerinde kaliteli kod üretmeye, teknik borçları azaltmaya ve sürekli öğrenmeye değer veriyorum. Yeni teknolojileri keşfetmeyi ve bilgilerimi ekibimle paylaşmayı seviyorum.
-                  </p>
+                </div>
+              </div>
+
+
+
+              <div className="pt-4">
+                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
+                  Education
+                </h2>
+                <div className="space-y-6">
+                  {education.map((edu, index) => (
+                    <div key={index} className="border-l-2 border-primary/30 pl-4 pb-6 relative">
+                      <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
+                      <h3 className="text-xl font-medium">{edu.degree}</h3>
+                      <div className="flex items-center text-sm text-muted-foreground mb-2">
+                        <span>{edu.institution}</span>
+                        <span className="mx-2">•</span>
+                        <span className="flex items-center">
+                          <Calendar className="mr-1 h-3 w-3" />
+                          {edu.period}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div className="pt-4">
                 <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
-                  İletişim Bilgileri
-                </h2>
-                <div className="space-y-4 text-muted-foreground">
-                  <div className="flex items-center">
-                    <Mail className="mr-2 h-5 w-5 text-primary" />
-                    <a 
-                      href="mailto:me@kerimcanyektek.com" 
-                      className="hover:text-primary transition-colors"
-                    >
-                      me@kerimcanyektek.com
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="mr-2 h-5 w-5 text-primary" />
-                    <span>Mersin, Türkiye</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
-                  Deneyimlerim
+                  Experience
                 </h2>
                 <div className="space-y-6">
                   {experiences.map((exp, index) => (
@@ -186,29 +205,6 @@ const AboutPage = () => {
                         </span>
                       </div>
                       <p className="text-muted-foreground">{exp.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-4">
-                <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 flex items-center">
-                  Eğitim
-                </h2>
-                <div className="space-y-6">
-                  {education.map((edu, index) => (
-                    <div key={index} className="border-l-2 border-primary/30 pl-4 pb-6 relative">
-                      <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1"></div>
-                      <h3 className="text-xl font-medium">{edu.degree}</h3>
-                      <div className="flex items-center text-sm text-muted-foreground mb-2">
-                        <span>{edu.institution}</span>
-                        <span className="mx-2">•</span>
-                        <span className="flex items-center">
-                          <Calendar className="mr-1 h-3 w-3" />
-                          {edu.period}
-                        </span>
-                      </div>
-                      <p className="text-muted-foreground">{edu.description}</p>
                     </div>
                   ))}
                 </div>

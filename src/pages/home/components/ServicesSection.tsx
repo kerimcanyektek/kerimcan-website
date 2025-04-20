@@ -24,20 +24,20 @@ const ServicesSection = () => {
   const services = [
     {
       icon: <Code className="h-8 w-8 text-primary" />,
-      title: "Wordpress Hizmetleri",
-      description: "Özelleştirilmiş WordPress çözümleri ile güçlü ve yönetimi kolay web siteleri oluşturuyorum.",
+      title: "Wordpress Services",
+      description: "I create powerful and easy-to-manage corporate websites with customized WordPress solutions.",
       link: "https://grodea.com/hizmetler/wordpress/"
     },
     {
       icon: <Globe className="h-8 w-8 text-primary" />,
-      title: "Web Geliştirme",
-      description: "Modern teknolojiler kullanarak hızlı, kullanıcı dostu ve etkileyici kurumsal web siteleri tasarlıyorum.",
+      title: "Web Development",
+      description: "I design fast, user-friendly, and visually impressive corporate websites using modern technologies.",
       link: "https://grodea.com/hizmetler/kurumsal-web-tasarim/"
     },
     {
       icon: <ShoppingCart className="h-8 w-8 text-primary" />,
       title: "E-Ticaret Çözümleri",
-      description: "IdeaSoft e-ticaret altyapısıyla, işletmenizin dijital dönüşümünü hızlandıracak, satış süreçlerini kolaylaştıracak ve müşteri memnuniyetini artıracak profesyonel e-ticaret çözümleri sunuyoruz.",
+      description: "I offer professional e-commerce solutions with IdeaSoft infrastructure to accelerate your digital transformation, simplify sales processes, and enhance customer satisfaction.",
       link: "https://grodea.com/hizmetler/e-ticaret/"
     }
   ];
@@ -53,7 +53,7 @@ const ServicesSection = () => {
             )}
             style={{ transitionDelay: "0.2s" }}
           >
-            Hizmetlerim
+            Services
           </h2>
           <p
             className={cn(
@@ -62,7 +62,8 @@ const ServicesSection = () => {
             )}
             style={{ transitionDelay: "0.25s" }}
           >
-            İhtiyaçlarınıza yönelik sunduğum özelleştirilmiş çözümler.
+            Tailored digital solutions to help your business grow online.
+            From custom WordPress websites to full-scale e-commerce platforms, I provide user-friendly and performance-driven web development services.
           </p>
         </div>
 

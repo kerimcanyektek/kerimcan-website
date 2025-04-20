@@ -42,7 +42,7 @@ const HeroSection = () => {
                 }`}
                 style={{ transitionDelay: "0.2s" }}
               >
-                FRONTEND DEVELOPER & UI/UX DESIGNER
+                FRONTEND DEVELOPER & AGILE PROJECT MANAGER
               </p>
               <h1
                 className={`text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight transition-all duration-700 ${
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 }`}
                 style={{ transitionDelay: "0.3s" }}
               >
-                Merhaba, ben <br />
+                Hello, I am <br />
                 <span className="gradient-text">Kerimcan Yektek</span>
               </h1>
             </div>
@@ -61,8 +61,7 @@ const HeroSection = () => {
               }`}
               style={{ transitionDelay: "0.4s" }}
             >
-              Modern ve kullanıcı dostu web uygulamaları geliştiriyorum.
-              React, TypeScript ve modern frontend teknolojilerinde uzmanım.
+              As a Frontend Developer, I specialize in modern web technologies and user experience design. I build user-friendly and high-performance web applications.
             </p>
 
             <div
@@ -72,13 +71,13 @@ const HeroSection = () => {
               style={{ transitionDelay: "0.5s" }}
             >
               <Button asChild size="lg">
-                <Link to="/projects">
-                  Projelerimi İncele
+                <Link to="/about">
+                  About Me
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/contact">İletişime Geç</Link>
+                <Link to="/contact">Contact</Link>
               </Button>
             </div>
 

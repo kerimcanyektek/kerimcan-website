@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { ExternalLink, Github, Search, Code, Layout, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,79 +7,91 @@ const ProjectsPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
   const projects = [
     {
-      title: "E-Ticaret Platformu",
-      description: "React ve Redux kullanarak geliştirilen kapsamlı bir e-ticaret çözümü. Kullanıcı dostu arayüz ve güçlü altyapı.",
-      image: "/placeholder.svg",
+      title: "Ricky and Morty",
+      description:
+        "A dynamic Rick and Morty character listing app built with Next.js and TypeScript, featuring Context API for state management and styled-components for modular design.",
+      image: "src/assets/project-images/20.svg",
       category: "web",
       tags: ["React", "Redux", "Styled Components"],
-      demoUrl: "https://demo.com",
+      demoUrl: "https://github.com/kerimcanyektek/ricky-and-morty-app",
       sourceUrl: "https://github.com",
-      featuredImage: true
+      featuredImage: true,
     },
     {
-      title: "Finans Dashboard",
-      description: "Finansal verileri görselleştiren, gerçek zamanlı güncellenen bir dashboard uygulaması.",
-      image: "/placeholder.svg",
-      category: "web",
-      tags: ["TypeScript", "Next.js", "TailwindCSS"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com",
-      featuredImage: true
+      title: "Poortre",
+      description:
+        "Poortre is a platform that analyzes children's drawings using psychological techniques. Expert psychologists help uncover children's emotions and thoughts through their artwork.",
+      image: "src/assets/project-images/14.svg",
+      category: "wordpress",
+      tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
+      demoUrl: "https://poortre.com",
+      featuredImage: false,
     },
     {
-      title: "Blog Platformu",
-      description: "İçerik yönetim sistemi ve okuyucu deneyimi odaklı modern bir blog uygulaması.",
-      image: "/placeholder.svg",
-      category: "web",
-      tags: ["React", "Node.js", "MongoDB"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com",
-      featuredImage: true
+      title: "Psychologist Mehmet Ali Yılmaz",
+      description:
+        "I developed a user-friendly and mobile-responsive corporate website for psychologist Mehmet Ali Yılmaz, which introduces his services and allows users to book appointments online.",
+      image: "src/assets/project-images/15.svg",
+      category: "wordpress",
+      tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
+      demoUrl: "https://pskmehmetaliyilmaz.com",
+      featuredImage: false,
     },
     {
-      title: "Hava Durumu Uygulaması",
-      description: "Gerçek zamanlı hava durumu verilerini gösteren PWA uyumu mobil uygulaması.",
-      image: "/placeholder.svg",
-      category: "mobile",
-      tags: ["React", "PWA", "Weather API"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com",
-      featuredImage: false
+      title: "Villa College",
+      description:
+        "I built a modern, mobile-friendly website for Villa College that reflects the school’s identity and programs while making it easy for visitors to access information and get in touch.",
+      image: "src/assets/project-images/16.svg",
+      category: "wordpress",
+      tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
+      demoUrl: "https://villakoleji.k12.tr",
+      featuredImage: false,
     },
     {
-      title: "Film Veritabanı",
-      description: "Film ve dizileri arayabileceğiniz, detaylı bilgilerini görebileceğiniz bir uygulama.",
-      image: "/placeholder.svg",
-      category: "mobile",
-      tags: ["React Native", "TMDB API", "Redux"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com",
-      featuredImage: false
+      title: "Kahraman Agriculture",
+      description:
+        "I created a mobile-responsive and easy-to-navigate website for Kahraman Tarım, highlighting the company’s agricultural services and enabling potential partners to connect easily.",
+      image: "src/assets/project-images/17.svg",
+      category: "wordpress",
+      tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
+      demoUrl: "https://kahramansebze.com",
+      featuredImage: false,
     },
     {
-      title: "Kurumsal Web Sitesi",
-      description: "Modern ve şık bir kurumsal web sitesi tasarımı ve implementasyonu.",
-      image: "/placeholder.svg",
-      category: "ui",
-      tags: ["HTML/CSS", "JavaScript", "Bootstrap"],
-      demoUrl: "https://demo.com",
-      sourceUrl: "https://github.com",
-      featuredImage: false
-    }
+      title: "Ritim Clinic",
+      description:
+        "I built a mobile-friendly website for Ritim Klinik that showcases its physiotherapy, diet, and Pilates services, while allowing users to book appointments with ease.",
+      image: "src/assets/project-images/18.svg",
+      category: "wordpress",
+      tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
+      demoUrl: "https://ritimklinik.com",
+      featuredImage: false,
+    },
+    {
+      title: "KEROKOD",
+      description:
+        "I launched Kerokod in 2019 as a personal blog to share what I’ve learned in the software field, publishing SEO-friendly articles and insights from my journey.",
+      image: "src/assets/project-images/19.svg",
+      category: "wordpress",
+      tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
+      demoUrl: "https://kerokod.com",
+      featuredImage: false,
+    },
   ];
 
-  const filteredProjects = projects.filter(project => {
+  const filteredProjects = projects.filter((project) => {
     const matchesCategory = filter === 'all' || project.category === filter;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesSearch =
+      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
@@ -96,69 +107,66 @@ const ProjectsPage = () => {
     <div className="animate-fade-in">
       <div className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
-          <h1 className={cn(
-            "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-8",
-            isLoaded && "animate-slide-down"
-          )}>
+          <h1
+            className={cn(
+              "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-8",
+              isLoaded && "animate-slide-down"
+            )}
+          >
             Projelerim
           </h1>
-          <p className={cn(
-            "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
-            isLoaded && "animate-slide-down"
-          )} style={{ animationDelay: '0.1s' }}>
+          <p
+            className={cn(
+              "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
+              isLoaded && "animate-slide-down"
+            )}
+            style={{ animationDelay: '0.1s' }}
+          >
             Geliştirdiğim web siteleri, uygulamalar ve UI/UX tasarımları.
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className={cn(
-          "flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4",
-          isLoaded && "animate-slide-up"
-        )}>
-          {/* Filter buttons */}
+        <div
+          className={cn(
+            "flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4",
+            isLoaded && "animate-slide-up"
+          )}
+        >
           <div className="flex flex-wrap gap-2">
-            <Button 
-              variant={filter === 'all' ? 'default' : 'outline'} 
+            <Button
+              variant={filter === 'all' ? 'default' : 'outline'}
               onClick={() => handleFilterClick('all')}
               className="flex items-center gap-2"
             >
               <Monitor size={16} />
               Tümü
             </Button>
-            <Button 
-              variant={filter === 'web' ? 'default' : 'outline'} 
+            <Button
+              variant={filter === 'web' ? 'default' : 'outline'}
               onClick={() => handleFilterClick('web')}
               className="flex items-center gap-2"
             >
               <Code size={16} />
-              Web Uygulamaları
+              Web Development
             </Button>
-            <Button 
-              variant={filter === 'mobile' ? 'default' : 'outline'} 
-              onClick={() => handleFilterClick('mobile')}
+            <Button
+              variant={filter === 'wordpress' ? 'default' : 'outline'}
+              onClick={() => handleFilterClick('wordpress')}
               className="flex items-center gap-2"
             >
               <Layout size={16} />
-              Mobil Uygulamalar
-            </Button>
-            <Button 
-              variant={filter === 'ui' ? 'default' : 'outline'} 
-              onClick={() => handleFilterClick('ui')}
-              className="flex items-center gap-2"
-            >
-              <Layout size={16} />
-              UI/UX Tasarımları
+              Wordpress
             </Button>
           </div>
 
-          {/* Search */}
           <div className="w-full md:w-auto relative">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <input
                 type="text"
-                placeholder="Projelerde ara..."
+                placeholder="Search..."
                 value={searchTerm}
                 onChange={handleSearchChange}
                 className="pl-10 pr-4 py-2 border border-border rounded-md w-full md:w-60 bg-background focus:outline-none focus:ring-1 focus:ring-primary"
@@ -170,7 +178,7 @@ const ProjectsPage = () => {
         {filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <div 
+              <div
                 key={index}
                 className={cn(
                   "bg-card rounded-lg overflow-hidden shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20",
@@ -179,39 +187,43 @@ const ProjectsPage = () => {
                 style={{ animationDelay: `${0.1 * (index + 1)}s` }}
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <p
+                    className="text-muted-foreground mb-4"
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                  ></p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs px-2 py-1 bg-secondary rounded-md text-muted-foreground">
+                      <span
+                        key={tag}
+                        className="text-xs px-2 py-1 bg-secondary rounded-md text-muted-foreground"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <a 
-                      href={project.demoUrl} 
-                      target="_blank" 
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm text-primary hover:underline"
                     >
-                      Demo <ExternalLink className="ml-1 h-3 w-3" />
+                      View Project <ExternalLink className="ml-1 h-3 w-3" />
                     </a>
-                    <a 
-                      href={project.sourceUrl} 
-                      target="_blank" 
+                    <a
+                      href={project.sourceUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-sm text-primary hover:underline"
-                    >
-                      Kaynak <Github className="ml-1 h-3 w-3" />
-                    </a>
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -219,7 +231,9 @@ const ProjectsPage = () => {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-xl text-muted-foreground">Aradığınız kriterlere uygun proje bulunamadı.</p>
+            <p className="text-xl text-muted-foreground">
+              Aradığınız kriterlere uygun proje bulunamadı.
+            </p>
           </div>
         )}
       </div>

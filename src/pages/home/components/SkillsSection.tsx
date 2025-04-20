@@ -70,7 +70,7 @@ const SkillsSection = () => {
     },
     { 
       name: "Adobe Photoshop", 
-      icon: PhotoshopWhiteLogo, 
+      icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg", 
       category: "Design"
     },
     { 
@@ -96,7 +96,7 @@ const SkillsSection = () => {
             )}
             style={{ transitionDelay: "0.2s" }}
           >
-            Yeteneklerim
+            Skills
           </h2>
           <p
             className={cn(
@@ -105,7 +105,7 @@ const SkillsSection = () => {
             )}
             style={{ transitionDelay: "0.25s" }}
           >
-            Modern yazılım geliştirme için kullandığım teknolojiler ve yeteneklerim.
+            The technologies and skills I use for modern software development.
           </p>
         </div>
 

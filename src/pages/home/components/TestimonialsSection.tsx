@@ -25,24 +25,24 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      content: "Kerimcan ile çalışmak gerçekten harika bir deneyimdi. Projemizi zamanında ve beklentilerimizin ötesinde tamamladı.",
+      content: "We worked with Kerimcan on various content marketing processes related to software development. He is fast and well-versed in current trends. His SEO-friendly articles for the Coderspace Blog and contributions to our monthly developer newsletter, Codebrew, have added great value to our content.",
+      author: "Ahmet Hoşgör",
+      position: "Co-Founder",
+      company: "Coderspace",
+      avatar: "/placeholder.svg"
+    },
+    {
+      content: "A motivated and determined developer — a true team player. He never shies away from responsibility and consistently keeps his lead and team updated throughout the process.",
       author: "Ahmet Yılmaz",
-      position: "Kurucu & CEO",
-      company: "XYZ Teknoloji",
+      position: "Frontend Team Lead",
+      company: "GittiGidiyor",
       avatar: "/placeholder.svg"
     },
     {
-      content: "Profesyonel çalışma etiği ve teknik bilgisiyle fark yaratan bir geliştirici. Gelecek projelerimizde tekrar birlikte çalışmayı umuyorum.",
-      author: "Zeynep Kaya",
-      position: "Ürün Müdürü",
-      company: "ABC Digital",
-      avatar: "/placeholder.svg"
-    },
-    {
-      content: "Kerimcan'ın geliştirdiği kullanıcı arayüzü hem estetik hem de kullanıcı dostu. Mobil cihazlarda da mükemmel çalışıyor.",
-      author: "Mehmet Demir",
-      position: "Pazarlama Direktörü",
-      company: "123 E-Ticaret",
+      content: "I met Kerimcan in 2020 when I joined his blog content site as one of the writers. Since then, his ability to expand the scope of his work, grow his business, and move forward tirelessly with an entrepreneurial spirit has always been a source of inspiration for me. With his inner motivation and self-discipline, achieving his goals is always inevitable. 🚀✨",
+      author: "Esmanur Yıldırım",
+      position: "Learning & Development, Employer Braanding Executive - Professional Coach",
+      company: "Yıldız Holding",
       avatar: "/placeholder.svg"
     }
   ];
@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
             )}
             style={{ transitionDelay: "0.2s" }}
           >
-            Müşteri Yorumları
+            What Do They Say About Me?
           </h2>
           <p
             className={cn(
@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
             )}
             style={{ transitionDelay: "0.25s" }}
           >
-            Birlikte çalıştığım kişilerin deneyimleri ve geri bildirimleri.
+            Experiences and feedback from the people I've worked with.
           </p>
         </div>
 

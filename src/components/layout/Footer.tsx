@@ -15,7 +15,7 @@ const Footer = () => {
               Kerimcan<span className="text-primary">.</span>Yektek
             </NavLink>
             <p className="text-muted-foreground max-w-md mt-2">
-              Frontend geliştirici olarak modern web teknolojileri ve kullanıcı deneyimi tasarımı konusunda uzmanım. Kullanıcı dostu ve performanslı web uygulamaları geliştiriyorum.
+              As a Frontend Developer, I specialize in modern web technologies and user experience design. I build user-friendly and high-performance web applications.
             </p>
             <div className="flex space-x-4 mt-6">
               <a href="https://github.com/kerimcanyektek" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
@@ -39,17 +39,17 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <NavLink to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Ana Sayfa
+                  Home
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  Hakkımda
+                  About Me
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-                  Projeler
+                  Projects
                 </NavLink>
               </li>
               <li>
@@ -59,7 +59,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  İletişim
+                  Contact
                 </NavLink>
               </li>
             </ul>
@@ -67,11 +67,11 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-medium text-lg mb-4">İletişim</h3>
+            <h3 className="font-medium text-lg mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-center text-muted-foreground">
                 <MapPin className="mr-2 h-4 w-4 text-primary" />
-                Mersin, Türkiye
+                Mersin, Turkey
               </li>
               <li>
                 <a 
@@ -88,7 +88,7 @@ const Footer = () => {
 
         <div className="border-t border-muted mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm text-center md:text-left">
-            © {currentYear} Kerimcan Yektek. Tüm hakları saklıdır.
+            © {currentYear} Kerimcan Yektek. 
           </p>
         </div>
       </div>

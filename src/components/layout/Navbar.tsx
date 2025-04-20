@@ -39,11 +39,11 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
   }, [mobileMenuOpen]);
 
   const navItems = [
-    { name: "Ana Sayfa", path: "/" },
-    { name: "Hakkımda", path: "/about" },
-    { name: "Projeler", path: "/projects" },
+    { name: "Home", path: "/" },
+    { name: "About Me", path: "/about" },
+    { name: "Projects", path: "/projects" },
     { name: "Blog", path: "/blog" },
-    { name: "İletişim", path: "/contact" }
+    { name: "Contact", path: "/contact" }
   ];
 
   return (

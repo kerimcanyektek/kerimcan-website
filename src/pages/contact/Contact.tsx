@@ -76,13 +76,13 @@ const ContactPage = () => {
             "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-8",
             isLoaded && "animate-slide-down"
           )}>
-            İletişim
+            Contact
           </h1>
           <p className={cn(
             "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
             isLoaded && "animate-slide-down"
           )} style={{ animationDelay: '0.1s' }}>
-            Projenizi hayata geçirmek veya sorularınız için benimle iletişime geçin.
+            Contact me to bring your project to life or if you have any questions.
           </p>
         </div>
       </div>
@@ -94,7 +94,7 @@ const ContactPage = () => {
             "md:col-span-4",
             isLoaded && "animate-slide-from-left"
           )}>
-            <h2 className="text-2xl font-heading font-bold mb-6">İletişim Bilgileri</h2>
+            <h2 className="text-2xl font-heading font-bold mb-6">Contact Info</h2>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -102,9 +102,9 @@ const ContactPage = () => {
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium">Adres</h3>
+                  <h3 className="text-lg font-medium">Address</h3>
                   <address className="not-italic text-muted-foreground">
-                    Mersin, Türkiye
+                    Mersin, Turkey
                   </address>
                 </div>
               </div>
@@ -114,7 +114,7 @@ const ContactPage = () => {
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium">E-posta</h3>
+                  <h3 className="text-lg font-medium">E-Mail</h3>
                   <a href="mailto:me@kerimcanyektek.com" className="text-muted-foreground hover:text-primary transition-colors">
                     me@kerimcanyektek.com
                   </a>
@@ -128,13 +128,13 @@ const ContactPage = () => {
             "md:col-span-8",
             isLoaded && "animate-slide-from-right"
           )}>
-            <h2 className="text-2xl font-heading font-bold mb-6">Mesaj Gönderin</h2>
+            <h2 className="text-2xl font-heading font-bold mb-6">Send Message</h2>
             
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Adınız <span className="text-red-500">*</span>
+                    Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -149,7 +149,7 @@ const ContactPage = () => {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    E-posta <span className="text-red-500">*</span>
+                    E-Mail <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -165,7 +165,7 @@ const ContactPage = () => {
               
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Konu <span className="text-red-500">*</span>
+                  Subject <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -180,7 +180,7 @@ const ContactPage = () => {
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Mesajınız <span className="text-red-500">*</span>
+                  Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -199,27 +199,15 @@ const ContactPage = () => {
                 className="w-full md:w-auto"
               >
                 {isSubmitting ? (
-                  <>Gönderiliyor...</>
+                  <>Sending...</>
                 ) : (
                   <>
-                    Mesaj Gönder
+                    Send
                     <Send className="ml-2 h-4 w-4" />
                   </>
                 )}
               </Button>
             </form>
-          </div>
-        </div>
-        
-        {/* Map */}
-        <div className={cn(
-          "mt-16",
-          isLoaded && "animate-slide-up"
-        )} style={{ animationDelay: '0.3s' }}>
-          <div className="bg-secondary aspect-[16/9] md:aspect-[21/9] rounded-lg overflow-hidden">
-            <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
-              Harita burada görünecek
-            </div>
           </div>
         </div>
       </div>
