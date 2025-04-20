@@ -18,7 +18,8 @@ const BlogPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  
+  const [animateList, setAnimateList] = useState(false);
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -93,6 +94,14 @@ const BlogPage = () => {
     { id: 'uiux', name: 'UI & UX Design' }
   ];
 
+  useEffect(() => {
+    if (filteredPosts.length > 0) {
+      setTimeout(() => setAnimateList(true), 150);
+    } else {
+      setAnimateList(false);
+    }
+  }, [filter, searchTerm]);
+
   const filteredPosts = blogPosts.filter(post => {
     const matchesCategory = filter === 'all' || post.category === filter;
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -113,32 +122,37 @@ const BlogPage = () => {
     <div className="animate-fade-in">
       <div className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
-          <h1 className={cn(
-            "text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-8",
-            isLoaded && "animate-slide-down"
-          )}>
+          <h1
+            className={`text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-center mb-8 transition-all duration-700 ${
+              isLoaded ? "animate-slide-down opacity-100" : "opacity-0"
+            }`}
+          >
             Blog
           </h1>
-          <p className={cn(
-            "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
-            isLoaded && "animate-slide-down"
-          )} style={{ animationDelay: '0.1s' }}>
+          <p
+            className={`text-lg text-muted-foreground text-center max-w-3xl mx-auto transition-all duration-700 ${
+              isLoaded ? "animate-fade-in opacity-100" : "opacity-0"
+            }`}
+            style={{ transitionDelay: "0.15s" }}
+          >
             Frontend geliştirme, web teknolojileri ve UI/UX tasarımı hakkında yazılar.
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-16">
-        <div className={cn(
-          "flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4",
-          isLoaded && "animate-slide-up"
-        )}>
+        <div
+          className={`flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 transition-all duration-700 ${
+            isLoaded ? "animate-slide-up opacity-100" : "opacity-0"
+          }`}
+          style={{ transitionDelay: "0.25s" }}
+        >
           {/* Filter buttons */}
           <div className="flex flex-wrap gap-2">
             {categories.map(category => (
-              <Button 
+              <Button
                 key={category.id}
-                variant={filter === category.id ? 'default' : 'outline'} 
+                variant={filter === category.id ? 'default' : 'outline'}
                 onClick={() => handleFilterClick(category.id)}
               >
                 {category.name}
@@ -164,18 +178,17 @@ const BlogPage = () => {
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
-              <div 
+              <div
                 key={post.id}
-                className={cn(
-                  "bg-card rounded-lg overflow-hidden shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20",
-                  isLoaded && "animate-slide-up"
-                )}
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+                className={`bg-card rounded-lg overflow-hidden shadow-sm border border-border transition-all duration-500 hover:shadow-md hover:border-primary/20 ${
+                  animateList ? "animate-slide-up opacity-100" : "opacity-0"
+                }`}
+                style={{ transitionDelay: `${0.25 + index * 0.14}s` }}
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
+                  <img
+                    src={post.image}
+                    alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>

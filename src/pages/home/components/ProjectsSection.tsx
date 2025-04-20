@@ -7,24 +7,20 @@ import { cn } from '@/lib/utils';
 
 const ProjectsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.25 }
     );
-    
     const element = document.getElementById('projects-section');
     if (element) observer.observe(element);
-    
-    return () => {
-      if (element) observer.unobserve(element);
-    };
+    return () => observer.disconnect();
   }, []);
 
   const featuredProjects = [
@@ -55,34 +51,40 @@ const ProjectsSection = () => {
     <section id="projects-section" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className={cn(
-            "text-3xl md:text-4xl font-heading font-bold mb-4",
-            isVisible && "animate-slide-up"
-          )}>
+          <h2
+            className={cn(
+              "text-3xl md:text-4xl font-heading font-bold mb-4 transition-all duration-700",
+              isVisible ? "animate-slide-up opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.2s" }}
+          >
             Öne Çıkan Projelerim
           </h2>
-          <p className={cn(
-            "text-muted-foreground",
-            isVisible && "animate-slide-up"
-          )} style={{ animationDelay: '0.1s' }}>
+          <p
+            className={cn(
+              "text-muted-foreground transition-all duration-700",
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.25s" }}
+          >
             En son geliştirdiğim projelerden bazıları. Daha fazlası için projeler sayfasını ziyaret edin.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
-            <div 
+            <div
               key={index}
               className={cn(
-                "bg-card rounded-lg overflow-hidden shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20",
-                isVisible && "animate-slide-up"
+                "bg-card rounded-lg overflow-hidden shadow-sm border border-border transition-all duration-500 hover:shadow-md hover:border-primary/20",
+                isVisible ? "animate-slide-up opacity-100" : "opacity-0"
               )}
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+              style={{ transitionDelay: `${0.35 + index * 0.15}s` }}
             >
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
@@ -97,9 +99,9 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <a 
-                    href={project.demoUrl} 
-                    target="_blank" 
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-sm text-primary hover:underline"
                   >

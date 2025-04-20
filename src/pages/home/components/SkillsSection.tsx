@@ -13,17 +13,17 @@ const SkillsSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.25 }
     );
     
     const element = document.getElementById('skills-section');
     if (element) observer.observe(element);
     
     return () => {
-      if (element) observer.unobserve(element);
+      if (element) observer.disconnect();
     };
   }, []);
 
@@ -89,35 +89,41 @@ const SkillsSection = () => {
     <section id="skills-section" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className={cn(
-            "text-3xl md:text-4xl font-heading font-bold mb-4",
-            isVisible && "animate-slide-up"
-          )}>
+          <h2
+            className={cn(
+              "text-3xl md:text-4xl font-heading font-bold mb-4 transition-all duration-700",
+              isVisible ? "animate-slide-up opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.2s" }}
+          >
             Yeteneklerim
           </h2>
-          <p className={cn(
-            "text-muted-foreground",
-            isVisible && "animate-slide-up"
-          )} style={{ animationDelay: '0.1s' }}>
+          <p
+            className={cn(
+              "text-muted-foreground transition-all duration-700",
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.25s" }}
+          >
             Modern yazılım geliştirme için kullandığım teknolojiler ve yeteneklerim.
           </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {skills.slice(0, 8).map((skill, index) => (
-            <Card 
+            <Card
               key={skill.name}
               className={cn(
                 "overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 border-primary/10",
-                isVisible && "animate-slide-up"
+                isVisible ? "animate-slide-up opacity-100" : "opacity-0"
               )}
-              style={{ animationDelay: `${0.05 * (index + 1)}s` }}
+              style={{ transitionDelay: `${0.3 + index * 0.1}s` }}
             >
               <CardContent className="p-4 flex flex-col items-center justify-center text-center h-full">
                 <div className="w-12 h-12 mb-3 flex items-center justify-center">
-                  <img 
-                    src={skill.icon} 
-                    alt={`${skill.name} icon`} 
+                  <img
+                    src={skill.icon}
+                    alt={`${skill.name} icon`}
                     className="max-w-full max-h-full object-contain"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
@@ -132,22 +138,22 @@ const SkillsSection = () => {
               </CardContent>
             </Card>
           ))}
-          
+
           <div className="md:col-start-2 md:col-span-2 flex justify-center gap-4">
             {skills.slice(8).map((skill, index) => (
-              <Card 
+              <Card
                 key={skill.name}
                 className={cn(
                   "overflow-hidden hover:shadow-md transition-all duration-300 hover:-translate-y-1 border-primary/10 w-full max-w-xs",
-                  isVisible && "animate-slide-up"
+                  isVisible ? "animate-slide-up opacity-100" : "opacity-0"
                 )}
-                style={{ animationDelay: `${0.05 * (index + 1)}s` }}
+                style={{ transitionDelay: `${0.8 + index * 0.12}s` }}
               >
                 <CardContent className="p-4 flex flex-col items-center justify-center text-center h-full">
                   <div className="w-12 h-12 mb-3 flex items-center justify-center">
-                    <img 
-                      src={skill.icon} 
-                      alt={`${skill.name} icon`} 
+                    <img
+                      src={skill.icon}
+                      alt={`${skill.name} icon`}
                       className="max-w-full max-h-full object-contain"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;

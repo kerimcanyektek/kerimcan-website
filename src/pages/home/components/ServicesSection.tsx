@@ -5,24 +5,20 @@ import { cn } from '@/lib/utils';
 
 const ServicesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
-    
     const element = document.getElementById('services-section');
     if (element) observer.observe(element);
-    
-    return () => {
-      if (element) observer.unobserve(element);
-    };
+    return () => observer.disconnect();
   }, []);
 
   const services = [
@@ -50,32 +46,38 @@ const ServicesSection = () => {
     <section id="services-section" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className={cn(
-            "text-3xl md:text-4xl font-heading font-bold mb-4",
-            isVisible && "animate-slide-up"
-          )}>
+          <h2
+            className={cn(
+              "text-3xl md:text-4xl font-heading font-bold mb-4 transition-all duration-700",
+              isVisible ? "animate-slide-up opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.2s" }}
+          >
             Hizmetlerim
           </h2>
-          <p className={cn(
-            "text-muted-foreground",
-            isVisible && "animate-slide-up"
-          )} style={{ animationDelay: '0.1s' }}>
+          <p
+            className={cn(
+              "text-muted-foreground transition-all duration-700",
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.25s" }}
+          >
             İhtiyaçlarınıza yönelik sunduğum özelleştirilmiş çözümler.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <a 
+            <a
               href={service.link}
               target="_blank"
               rel="noopener noreferrer"
               key={index}
               className={cn(
-                "bg-card rounded-lg p-6 shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20 hover:-translate-y-1",
-                isVisible && "animate-slide-up"
+                "bg-card rounded-lg p-6 shadow-sm border border-border transition-all duration-500 hover:shadow-md hover:border-primary/20 hover:-translate-y-1",
+                isVisible ? "animate-slide-up opacity-100" : "opacity-0"
               )}
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+              style={{ transitionDelay: `${0.35 + index * 0.15}s` }}
             >
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-xl font-medium mb-2">{service.title}</h3>

@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -10,17 +9,17 @@ const TestimonialsSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.20 }
     );
     
     const element = document.getElementById('testimonials-section');
     if (element) observer.observe(element);
     
     return () => {
-      if (element) observer.unobserve(element);
+      if (element) observer.disconnect();
     };
   }, []);
 
@@ -52,29 +51,35 @@ const TestimonialsSection = () => {
     <section id="testimonials-section" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className={cn(
-            "text-3xl md:text-4xl font-heading font-bold mb-4",
-            isVisible && "animate-slide-up"
-          )}>
+          <h2
+            className={cn(
+              "text-3xl md:text-4xl font-heading font-bold mb-4 transition-all duration-700",
+              isVisible ? "animate-slide-up opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.2s" }}
+          >
             Müşteri Yorumları
           </h2>
-          <p className={cn(
-            "text-muted-foreground",
-            isVisible && "animate-slide-up"
-          )} style={{ animationDelay: '0.1s' }}>
+          <p
+            className={cn(
+              "text-muted-foreground transition-all duration-700",
+              isVisible ? "animate-fade-in opacity-100" : "opacity-0"
+            )}
+            style={{ transitionDelay: "0.25s" }}
+          >
             Birlikte çalıştığım kişilerin deneyimleri ve geri bildirimleri.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <div
               key={index}
               className={cn(
-                "bg-card rounded-lg p-6 shadow-sm border border-border transition-all duration-300 hover:shadow-md hover:border-primary/20",
-                isVisible && "animate-slide-up"
+                "bg-card rounded-lg p-6 shadow-sm border border-border transition-all duration-500 hover:shadow-md hover:border-primary/20",
+                isVisible ? "animate-slide-up opacity-100" : "opacity-0"
               )}
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+              style={{ transitionDelay: `${0.35 + index * 0.15}s` }}
             >
               <div className="mb-4">
                 <svg className="h-8 w-8 text-primary/30" fill="currentColor" viewBox="0 0 24 24">
@@ -84,7 +89,7 @@ const TestimonialsSection = () => {
               <p className="text-foreground mb-6">{testimonial.content}</p>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <img 
+                  <img
                     className="h-10 w-10 rounded-full object-cover"
                     src={testimonial.avatar}
                     alt={testimonial.author}
