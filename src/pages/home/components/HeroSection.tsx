@@ -126,7 +126,7 @@ const HeroSection = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full p-2">
               <div className="absolute inset-0 rounded-full overflow-hidden">
                 <img
-                  src="/lovable-uploads/0db8acda-21b1-4f97-96c2-79d5227b1969.png"
+                  src="/photos/0db8acda-21b1-4f97-96c2-79d5227b1969.png"
                   alt="Kerimcan Yektek"
                   className="w-full h-full object-cover"
                 />

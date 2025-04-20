@@ -36,8 +36,8 @@ const ServicesSection = () => {
     },
     {
       icon: <ShoppingCart className="h-8 w-8 text-primary" />,
-      title: "E-Ticaret Çözümleri",
-      description: "I offer professional e-commerce solutions with IdeaSoft infrastructure to accelerate your digital transformation, simplify sales processes, and enhance customer satisfaction.",
+      title: "E-Commerce Solutions",
+      description: "I offer professional e-commerce solutions with ikas infrastructure to accelerate your digital transformation, simplify sales processes, and enhance customer satisfaction.",
       link: "https://grodea.com/hizmetler/e-ticaret/"
     }
   ];

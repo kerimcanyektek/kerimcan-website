@@ -81,7 +81,7 @@ const AboutPage = () => {
               isLoaded && "animate-slide-from-left"
             )}>
               <img 
-                src="/lovable-uploads/0db8acda-21b1-4f97-96c2-79d5227b1969.png" 
+                src="/photos/0db8acda-21b1-4f97-96c2-79d5227b1969.png" 
                 alt="Kerimcan Yektek" 
                 className="w-full h-auto"
               />

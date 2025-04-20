@@ -27,21 +27,21 @@ const ProjectsSection = () => {
     {
       title: "Villa College",
       description: "A corporate website designed for Özel Tarsus Villa Koleji, featuring a user-friendly interface and modern design.",
-      image: "src/assets/project-images/16.svg",
+      image: "/project-images/16.svg",
       tags: ["WordPress", "Responsive Design", "SEO", "WordPress Speed Optimization"],
       demoUrl: "https://villakoleji.k12.tr/"
     },
     {
       title: "Psikolog Mehmet Ali Yılmaz",
       description: "A personal website designed to strengthen the online presence of a professional and trusted psychologist.",
-      image: "src/assets/project-images/15.svg",
+      image: "/project-images/15.svg",
       tags: ["WordPress", "Responsive Design", "SEO", "WordPress Speed Optimization"],
       demoUrl: "https://pskmehmetaliyilmaz.com/"
     },
     {
       title: "Poortre",
       description: "An innovative platform designed as a Psychological Drawing Analysis Platform, combining art and psychology.",
-      image: "src/assets/project-images/14.svg",
+      image: "/project-images/14.svg",
       tags: ["WordPress", "Responsive Design", "SEO", "WordPress Speed Optimization"],
       demoUrl: "https://www.poortre.com"
     }

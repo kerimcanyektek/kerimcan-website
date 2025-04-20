@@ -35,7 +35,7 @@ const blogPosts: BlogPost[] = [
     date: "05/5/2024",
     readTime: "6 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/1.svg",
+    image: "blog-images/1.svg",
     tags: ["JavaScript", "CSS", "Styled Components"],
   },
   {
@@ -46,7 +46,7 @@ const blogPosts: BlogPost[] = [
     date: "05/5/2024",
     readTime: "7 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/2.svg",
+    image: "blog-images/2.svg",
     tags: ["CSS", "BEM", "Temiz Kod"],
   },
   {
@@ -57,7 +57,7 @@ const blogPosts: BlogPost[] = [
     date: "05/5/2024",
     readTime: "8 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/3.svg",
+    image: "blog-images/3.svg",
     tags: ["React", "Ant Design", "UI Kütüphanesi"],
   },
   {
@@ -68,7 +68,7 @@ const blogPosts: BlogPost[] = [
     date: "05/5/2024",
     readTime: "5 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/4.svg",
+    image: "blog-images/4.svg",
     tags: ["Vite", "Frontend", "Performans"],
   },
   {
@@ -79,7 +79,7 @@ const blogPosts: BlogPost[] = [
     date: "13/3/2025",
     readTime: "7 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/5.svg",
+    image: "blog-images/5.svg",
     tags: ["Yapay Zeka", "Kod Editörü", "Verimlilik"],
   },
   {
@@ -90,7 +90,7 @@ const blogPosts: BlogPost[] = [
     date: "14/2/2025",
     readTime: "8 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/6.svg",
+    image: "blog-images/6.svg",
     tags: ["Yapay Zeka", "Generative AI", "Teknoloji"],
   },
   {
@@ -101,7 +101,7 @@ const blogPosts: BlogPost[] = [
     date: "14/8/2024",
     readTime: "6 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/7.svg",
+    image: "blog-images/7.svg",
     tags: ["Hata Yönetimi", "Debugging", "Yazılım Kalitesi"],
   },
   {
@@ -112,7 +112,7 @@ const blogPosts: BlogPost[] = [
     date: "26/7/2024",
     readTime: "7 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/8.svg",
+    image: "blog-images/8.svg",
     tags: ["SOLID", "OOP", "Kod Kalitesi"],
   },
   {
@@ -123,7 +123,7 @@ const blogPosts: BlogPost[] = [
     date: "1/8/2024",
     readTime: "6 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/9.svg",
+    image: "blog-images/9.svg",
     tags: ["GitHub", "Açık Kaynak", "Topluluk"],
   },
   {
@@ -134,7 +134,7 @@ const blogPosts: BlogPost[] = [
     date: "7/8/2024",
     readTime: "5 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/10.svg",
+    image: "blog-images/10.svg",
     tags: ["CSS", "Web Tasarım", "Frontend"],
   },
   {
@@ -145,7 +145,7 @@ const blogPosts: BlogPost[] = [
     date: "7/8/2024",
     readTime: "5 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/11.svg",
+    image: "blog-images/11.svg",
     tags: ["HTML", "Web", "Temel"],
   },
   {
@@ -156,7 +156,7 @@ const blogPosts: BlogPost[] = [
     date: "25/7/2024",
     readTime: "9 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/12.svg",
+    image: "blog-images/12.svg",
     tags: ["Frontend", "Optimizasyon", "Performans"],
   },
   {
@@ -167,7 +167,7 @@ const blogPosts: BlogPost[] = [
     date: "02 Tem 2022",
     readTime: "8 minute",
     category: "yazilim",
-    image: "src/assets/blog-images/13.svg",
+    image: "blog-images/13.svg",
     tags: ["Yazılım", "Kariyer", "Beceri"],
   }
 ];

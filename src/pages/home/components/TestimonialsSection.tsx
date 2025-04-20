@@ -29,21 +29,18 @@ const TestimonialsSection = () => {
       author: "Ahmet Hoşgör",
       position: "Co-Founder",
       company: "Coderspace",
-      avatar: "/placeholder.svg"
     },
     {
       content: "A motivated and determined developer — a true team player. He never shies away from responsibility and consistently keeps his lead and team updated throughout the process.",
       author: "Ahmet Yılmaz",
       position: "Frontend Team Lead",
       company: "GittiGidiyor",
-      avatar: "/placeholder.svg"
     },
     {
       content: "I met Kerimcan in 2020 when I joined his blog content site as one of the writers. Since then, his ability to expand the scope of his work, grow his business, and move forward tirelessly with an entrepreneurial spirit has always been a source of inspiration for me. With his inner motivation and self-discipline, achieving his goals is always inevitable. 🚀✨",
       author: "Esmanur Yıldırım",
       position: "Learning & Development, Employer Braanding Executive - Professional Coach",
       company: "Yıldız Holding",
-      avatar: "/placeholder.svg"
     }
   ];
 
@@ -88,13 +85,6 @@ const TestimonialsSection = () => {
               </div>
               <p className="text-foreground mb-6">{testimonial.content}</p>
               <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-10 w-10 rounded-full object-cover"
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                  />
-                </div>
                 <div className="ml-3">
                   <p className="text-sm font-medium">{testimonial.author}</p>
                   <p className="text-xs text-muted-foreground">{testimonial.position}, {testimonial.company}</p>
