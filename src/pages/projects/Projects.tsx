@@ -1,12 +1,19 @@
-import { useEffect, useState } from 'react';
-import { ExternalLink, Github, Search, Code, Layout, Monitor } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { useEffect, useState } from "react";
+import {
+  ExternalLink,
+  Github,
+  Search,
+  Code,
+  Layout,
+  Monitor,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const ProjectsPage = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [filter, setFilter] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [filter, setFilter] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     setIsLoaded(true);
@@ -14,11 +21,33 @@ const ProjectsPage = () => {
 
   const projects = [
     {
+      title: "Personal Web Site",
+      description:
+        "I developed my personal website using React and Tailwind CSS, combining shadcn/ui, Radix UI, and Lucide for a modern interface. The site features dynamic routing with React Router and includes Open Graph integration for rich link sharing.",
+      image: "/project-images/22.svg",
+      category: "web",
+      tags: ["React", "Vite", "Tailwind", "Radix UI"],
+      demoUrl: "https://kerimcanyektek.com",
+      sourceUrl: "https://github.com",
+      featuredImage: true,
+    },
+    {
+      title: "Weather App",
+      description:
+        "A responsive weather application built with React and Tailwind CSS, displaying a 5-day forecast based on the user's current location using the Open-Meteo API.",
+      image: "/project-images/21.svg",
+      category: "web",
+      tags: ["React", "Vite", "Tailwind", "Open-Meteo API"],
+      demoUrl: "https://WeatherApp.kerimcanyektek.com",
+      sourceUrl: "https://github.com",
+      featuredImage: true,
+    },
+    {
       title: "Ricky and Morty",
       description:
         "A dynamic Rick and Morty character listing app built with Next.js and TypeScript, featuring Context API for state management and styled-components for modular design.",
-        image: "/project-images/20.svg",
-        category: "web",
+      image: "/project-images/20.svg",
+      category: "web",
       tags: ["React", "Redux", "Styled Components"],
       demoUrl: "https://github.com/kerimcanyektek/ricky-and-morty-app",
       sourceUrl: "https://github.com",
@@ -38,8 +67,8 @@ const ProjectsPage = () => {
       title: "Psychologist Mehmet Ali Yılmaz",
       description:
         "I developed a user-friendly and mobile-responsive corporate website for psychologist Mehmet Ali Yılmaz, which introduces his services and allows users to book appointments online.",
-        image: "/project-images/15.svg",
-        category: "wordpress",
+      image: "/project-images/15.svg",
+      category: "wordpress",
       tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
       demoUrl: "https://pskmehmetaliyilmaz.com",
       featuredImage: false,
@@ -48,8 +77,8 @@ const ProjectsPage = () => {
       title: "Villa College",
       description:
         "I built a modern, mobile-friendly website for Villa College that reflects the school’s identity and programs while making it easy for visitors to access information and get in touch.",
-        image: "/project-images/16.svg",
-        category: "wordpress",
+      image: "/project-images/16.svg",
+      category: "wordpress",
       tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
       demoUrl: "https://villakoleji.k12.tr",
       featuredImage: false,
@@ -58,8 +87,8 @@ const ProjectsPage = () => {
       title: "Kahraman Agriculture",
       description:
         "I created a mobile-responsive and easy-to-navigate website for Kahraman Tarım, highlighting the company’s agricultural services and enabling potential partners to connect easily.",
-        image: "/project-images/17.svg",
-        category: "wordpress",
+      image: "/project-images/17.svg",
+      category: "wordpress",
       tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
       demoUrl: "https://kahramansebze.com",
       featuredImage: false,
@@ -68,8 +97,8 @@ const ProjectsPage = () => {
       title: "Ritim Clinic",
       description:
         "I built a mobile-friendly website for Ritim Klinik that showcases its physiotherapy, diet, and Pilates services, while allowing users to book appointments with ease.",
-        image: "/project-images/18.svg",
-        category: "wordpress",
+      image: "/project-images/18.svg",
+      category: "wordpress",
       tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
       demoUrl: "https://ritimklinik.com",
       featuredImage: false,
@@ -78,8 +107,8 @@ const ProjectsPage = () => {
       title: "KEROKOD",
       description:
         "I launched Kerokod in 2019 as a personal blog to share what I’ve learned in the software field, publishing SEO-friendly articles and insights from my journey.",
-        image: "/project-images/19.svg",
-        category: "wordpress",
+      image: "/project-images/19.svg",
+      category: "wordpress",
       tags: ["Wordpress", "Responsive Design", "SEO", "Optimization"],
       demoUrl: "https://kerokod.com",
       featuredImage: false,
@@ -87,11 +116,13 @@ const ProjectsPage = () => {
   ];
 
   const filteredProjects = projects.filter((project) => {
-    const matchesCategory = filter === 'all' || project.category === filter;
+    const matchesCategory = filter === "all" || project.category === filter;
     const matchesSearch =
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.tags.some((tag) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      project.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     return matchesCategory && matchesSearch;
   });
 
@@ -113,16 +144,16 @@ const ProjectsPage = () => {
               isLoaded && "animate-slide-down"
             )}
           >
-            Projelerim
+            Projects
           </h1>
           <p
             className={cn(
               "text-lg text-muted-foreground text-center max-w-3xl mx-auto",
               isLoaded && "animate-slide-down"
             )}
-            style={{ animationDelay: '0.1s' }}
+            style={{ animationDelay: "0.1s" }}
           >
-            Geliştirdiğim web siteleri, uygulamalar ve UI/UX tasarımları.
+            Discover the web applications, WordPress projects, and more that I’ve built!
           </p>
         </div>
       </div>
@@ -136,24 +167,24 @@ const ProjectsPage = () => {
         >
           <div className="flex flex-wrap gap-2">
             <Button
-              variant={filter === 'all' ? 'default' : 'outline'}
-              onClick={() => handleFilterClick('all')}
+              variant={filter === "all" ? "default" : "outline"}
+              onClick={() => handleFilterClick("all")}
               className="flex items-center gap-2"
             >
               <Monitor size={16} />
               Tümü
             </Button>
             <Button
-              variant={filter === 'web' ? 'default' : 'outline'}
-              onClick={() => handleFilterClick('web')}
+              variant={filter === "web" ? "default" : "outline"}
+              onClick={() => handleFilterClick("web")}
               className="flex items-center gap-2"
             >
               <Code size={16} />
               Web Development
             </Button>
             <Button
-              variant={filter === 'wordpress' ? 'default' : 'outline'}
-              onClick={() => handleFilterClick('wordpress')}
+              variant={filter === "wordpress" ? "default" : "outline"}
+              onClick={() => handleFilterClick("wordpress")}
               className="flex items-center gap-2"
             >
               <Layout size={16} />

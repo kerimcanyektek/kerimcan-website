@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h3 className="font-medium text-lg mb-4">Linkler</h3>
+            <h3 className="font-medium text-lg mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
                 <NavLink to="/" className="text-muted-foreground hover:text-primary transition-colors">
